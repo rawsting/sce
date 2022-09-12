@@ -1,3 +1,609 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  max-width:100%;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.center-ctnr {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.h-line {
+  width: 100%;
+  height: 5%;
+  z-index: 1;
+  background: red;
+}
+
+i {
+  display: inline-block;
+}
+
+/* ------------------ End Global Classes -----------------*/
+
+#navbar {
+  display: flex;
+  height: 30vh;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 1vw;
+  top: 1vh;
+}
+
+#nav-icon {
+  position: sticky;
+  color: grey;
+  transition: 0.5s;
+}
+
+#nav-icon:hover {
+  cursor: pointer;
+}
+
+.nav-icon-on {
+  background: black;
+  color: white;
+  transform: rotate(90deg);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  transition: 0.5s;
+}
+
+.nav-icon-off {
+  background: none;
+  color: grey;
+  transform: rotate(0deg);
+  transition: 0.5s;
+}
+
+#nav-sub {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background: black;
+  height: 100%;
+  width: 100%;
+  padding: 15px 5px 5px 5px;
+  display: none;
+}
+
+#nav-sub a {
+  color: white;
+  text-decoration: none;
+}
+
+#nav-sub a:hover {
+  color: #17a2b8;
+}
+
+/* make appear */
+#nav-icon:hover ~ #nav-sub {
+  display: flex;
+  animation: navSlideDown 2s linear;
+}
+
+#nav-sub:hover {
+  display: flex;
+}
+
+/* End Nav */
+
+#heading-section {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background-image: url("https://wallpaperplay.com/walls/full/5/9/a/164622.jpg");
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+
+#heading-section object {
+  width: 25vw;
+  height: 25vh;
+}
+
+#heading-section h1 {
+  font-size: 7rem;
+  color: white;
+  animation: headerSlide 3s 1;
+}
+
+#heading-section h2,
+#heading-section p {
+  color: white;
+}
+
+#heading-section a {
+  text-decoration: none;
+  color: white;
+  display: inline;
+  position: absolute;
+  bottom: 5%;
+}
+
+#welcome-section {
+  min-height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 10% 2fr 10%;
+  /*column-gap: 2vw;*/
+  grid-template-areas:
+    "timg abMe abMe"
+    "iDo iDo iDo"
+    "card card card"
+    ". toProj .";
+  /* could make cards all in one container to fit them in middle w/ padding */
+  color: white;
+  background: #2c3e50;
+}
+
+
+#prsnl-timg-ctnr {
+  grid-area: timg;
+  padding: 3%;
+  text-align: right;
+}
+
+#about-me {
+  grid-area: abMe;
+  font-size: 20px;
+  padding: 1%;
+}
+
+#whatIDo {
+  grid-area: iDo;
+  text-align: center;
+  border-top: 2px solid white;
+}
+
+#card-ctnr {
+  grid-area: card;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 17px;
+  max-width: 100%;
+}
+
+#card-ctnr .card {
+  width: 30%;
+}
+
+/* Why didnt last-child work? */
+#certCard {
+  margin-top: 5vh;
+  max-width: 100%;
+}
+
+#gcert-ctnr {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+/* Fix this so they are technically aligned w/ each other */
+.certGroup {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+  text-decoration: none;
+  color: #343A40;
+  text-align: center;
+}
+
+.certGroup:hover {
+  text-decoration: none;
+  color: #343A40;
+}
+
+#toProj {
+  grid-area: toProj;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#toProj p {
+  display: inline;
+}
+
+#toProj a {
+  display: flex;
+  width: 40%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  text-decoration: none;
+}
+
+#toProj > a:hover {
+  /* Try to make button that fills border */
+}
+
+#projects {
+  width: 100vw;
+  min-height: 100vh;
+  display: inline-flex;
+  text-align: center;
+  flex-direction: column;
+  background: #0b72bd;
+}
+
+#proj-sec-title {
+  display: inline;
+  padding: 1rem;
+  text-align: center;
+  background: linear-gradient(#2c3e50, #0b72bd);
+  color: white;
+  margin: 0;
+}
+
+#proj-g-ctnr {
+  display: flex;
+  /* No longer needed with slide
+  flex-direction: row;
+  flex-wrap: wrap;
+  */
+  align-items: center;
+  justify-content: center;
+}
+
+#slideshow-ctnr {
+  display: flex;
+  width: 60vw;
+  height: 40vw;
+  border: 1px solid black;
+  align-self: center;
+  position: relative;
+  text-align: center;
+  border: 3px solid #34495e;
+  border-radius: .5rem;
+}
+
+#slideBtn-ctnr {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  width: 100%;
+  bottom: 50%;
+  transform: translateY(-50%);
+}
+
+.slideBtn {
+  padding: 5px;
+  transition: .3s;
+}
+
+.slideBtn:hover {
+  background-color: rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#slidePos {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: grey;
+  font-size: 18px;
+}
+
+#slidePos p {
+  margin:0;
+}
+
+.ss-obj {
+  width: 100%;
+  display: flex;
+}
+
+.project-tile {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background: white;
+}
+
+#moreProjSlide {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: white;
+  border-radius: .25rem;
+}
+
+/* Proj Button*/
+
+.full-proj {
+  display: inline-block;
+  height: 5vh;
+  text-align: center;
+  align-self: center;
+  background: white;
+  color: black;
+  border: none;
+  padding: 5px 7px 5px 5px;
+  margin: 10px;
+  border-radius: 16px;
+  transition: 0.5s;
+}
+
+.full-proj i {
+  animation: leftToRight 1.5s linear infinite paused;
+  transition: 0.3s;
+}
+
+.full-proj:hover {
+  color: white;
+  background: #3399ff;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.full-proj:hover i {
+  color: white;
+  margin-left: 5px;
+  animation-play-state: running;
+  transition: 0.3s;
+}
+
+/*
+#full-proj::before {
+  background: white;
+  width: 0%;
+  height: 5%;
+  position: absolute;
+  left:0px;
+  content: "";
+}
+
+#full-proj:hover::before {
+  width: 10%;
+  content:"View All My Projects"
+}
+
+*/
+
+#to-contact {
+  color: white;
+  text-decoration: none;
+  display: inline;
+  margin: 12px 0px 24px 0px;
+}
+
+#contact {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: #c0392b;
+  color: white;
+}
+
+#contact-title {
+  /* background: linear-gradient(#0b72bd, #c0392b)*/
+}
+
+#contact-icons {
+  width: 60vw;
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  /*
+  grid-template-columns: repeat(4, 15vw);
+  grid-template-rows: 50% 50%;
+  grid-template-areas: "fcc cdpn github email";
+  */
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 1px solid white; */
+}
+
+#contact-icons a {
+  color: white;
+  transition: 0.3s;
+}
+
+#contact-icons a:hover {
+  color: #00ccff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* Change this to "fcc-icon" when transferring to GH, only for challenge */
+#profile-link {
+  grid-area: fcc;
+}
+
+#cdpn-icon {
+  grid-area: cdpn;
+}
+
+#github-icon {
+  grid-area: github;
+}
+
+#email-icon {
+  grid-area: email;
+}
+
+#response-form {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  margin: 2%;
+}
+
+#fullName {
+  width: 33%;
+}
+
+#email {
+  width: 50%;
+}
+
+#tel {
+  width: 12em;
+}
+
+#comment-area {
+  resize: none;
+  height: 20vh;
+}
+
+#send-btn {
+  width: 50%;
+  height: 10%;
+  border: none;
+  transition: 0.3s;
+}
+
+#send-btn:hover {
+  box-shadow: black 4px 4px 4px 4px;
+  cursor:pointer;
+  background-color: rgb(80, 80, 80);
+  color: white;
+  transition: 0.3s;
+}
+
+/* figure out how to slide in from top */
+@keyframes headerSlide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes upAndDown {
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  75% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes leftToRight {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* Slide Down
+@keyframes navSlideDown{
+  from {height: 0%;};
+  to {height: 20vh;};
+}
+*/
+
+/* Media Queries */
+
+/* Mobile */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  #heading-section {
+    justify-content: flex-start;
+    border:3px solid red;
+  }
+  #heading-section object {
+    width: 60vw;
+    height: 40vh;
+  }
+  #heading-section h1 {
+    font-size:4rem;
+  }
+  #heading-section a { /* Make arrow posotion higher up in page, also center */
+    bottom: 50%;
+  }
+ 
+  #about-me {
+      font-size: 28px;
+  }
+  /* welcome section move boxes closer to "What I Do" */
+  #card-ctnr {
+    flex-wrap: wrap;
+  }
+  #card-ctnr .card {
+    width: 90vw;
+    min-height: 30vh;
+    font-size: 28px;
+  }
+  #toProj {
+    width: 40vw;
+  }
+  #toProj a {
+    display: flex;
+    width: 100%;
+  }
+  /* Projects */
+  .project-tile {
+    width: 80%;
+  }
+  /* Contact */
+  #contact-icons {
+    width: 100vw;
+  }
+  #response-form {
+    width: 80vw;
+    margin-bottom: 15vh;
+  }
+  #email {
+    width:60%;
+  }
+  #tel {
+    width: 35%;
+  }
+}
 body {
   background: #085078;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #85D8CE, #085078);  /* Chrome 10-25, Safari 5.1-6 */
