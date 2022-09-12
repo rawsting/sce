@@ -15,317 +15,58 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <nav id="navbar">
-      <i class="fas fa-chevron-circle-right fa-3x" id="nav-icon"></i>
-      <div id="nav-sub">
-        <a href="#welcome-section">
-          <i class="fas fa-user fa-2x"></i>
-        </a>
-        <a href="#projects">
-          <i class="fas fa-clipboard-list fa-2x"></i>
-        </a>
-        <a href="#contact">
-          <i class="fas fa-address-card fa-2x"></i>
-        </a>
-      </div>
-    </nav>
-    <header id="heading-section">
-      <div style="text-align: center;">
-        <object data="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/Logo2.svg" type="image/svg+xml"></object>
-        <h1> Hi, I'm Jacob Bruce </h1>
-        <br>
-        <h2> A Front-End Web Developer </h2>
-      </div>
-      <a href="#welcome-section">
-        <i class="fas fa-angle-double-down fa-3x" style="animation: upAndDown 2s linear 1s infinite;"></i>
-      </a>
-    </header>
-    <section id="welcome-section">
-      <div class="center-ctnr" id="prsnl-timg-ctnr">
-        <img class="img-fluid img-thumbnail" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/PFPHoco.jpg" alt="Profile Picture" id="personal-thumbnail" onmouseover="pfpHover()" onmouseout="pfpUnHover()" />
-      </div>
-      <article id="about-me">
-        My name is Jacob Bruce and I'm from Rome, Georgia. I'm currently enrolled at Rome High School and graduate in May 2021. I hope to become a Front End web developer and learn some Back End as well, and hopefully become a Full Stack developer eventually. I enjoy building websites from the ground up and creating beautiful webpages. I've always wanted to create an online platform or large-scale website. Outside of programming I enjoy playing soccer <i class="fas fa-futbol"></i> and currently play club soccer at SSA North Georgia and for my high school Varsity team. After graduating high school I'd like to get a entry-level job and hopefully go to college and earn a degree in Web Design.
-      </article>
-      <div id="whatIDo" class="center-ctnr">
-        <h1> What I do </h1>
-      </div>
-      <div id="card-ctnr">
-        <div class="card" id="htmlCard">
-          <div class="card-title bg-dark text-light text-center">
-            <h1> HTML5 </h1>
-          </div>
-          <div class="card-body text-dark"> 
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/html5-logo.svg" style="width:40%;height:40%;float:left;" alt="HTML5"/>
-            <p> 
-              I have been learning and practicing HTML since late 2015. I started out on a snow day from school because I wanted to make my own Minecraft website. It started out very rough, like getting font-size mixed up with text-size, but ever since then I have been ethused in making webpages using HTML. I am very versed in making static pages and am beginning to dive into making dynamic web pages. Later this year in 2020 I will be getting certified by Microsoft with their MTA HTML5 test.
-            </p>
-          </div>
-        </div>
-        <div class="card" id="cssCard">
-          <div class="card-title bg-dark text-light text-center">
-            <h1> CSS3 </h1>
-          </div>
-          <div class="card-body text-dark"> 
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/css3-logo.svg" style="width:40%;height:40%;float:left;" alt="CSS3"/>
-            <p>
-              I have been learning CSS since I started learning HTML to style it. I started out using inline CSS and gradually moved to the style tag and then to seperate stylesheets. I have grown my knowledge in CSS greatly, from forgetting how to change the font-size to an almost full understanding of Grid and Flexbox. As mentioned, I know how to use Grid and Flexbox to create beautiful layouts, as well as how to style elements and make the entire page look amazingly beautiful. I am also delving into preprocessors like SASS.
-            </p>
-          </div>
-        </div>
-        <div class="card" id="laterCard">
-          <div class="card-title bg-dark text-light text-center">
-            <h1> JavaScript </h1>
-          </div>
-          <div class="card-body text-dark"> 
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/js5-logo.svg" style="width: 40%;height:40%; float:left;" alt="JS5"/>
-            <p> 
-              I have always been interested in JavaScript and have begun learning it recently. I enjoy making my pages interactive and manipulation data. I have begun learning JS5 and have delved into libraries such as JQuery which make learning and programming JS easier and quicker. I am also interested in backend libraries for JS, Node.JS specifically. I plan to become highly versed in JavaScript and learn Node.JS to delve into the backend of web development.
-            </p>
-          </div>
-        </div>
-        <div class="card" id="certCard">
-          <div class="card-title bg-dark text-light text-center">
-            <h1> Certifications </h1>
-          </div>
-          <div class="card-body text-dark" id="gcert-ctnr">
-            <a class="certGroup" href="https://www.freecodecamp.org/certification/jacob_bruce/responsive-web-design" target="_blank"><h3>FCC Responsive Web Design</h3><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/FCC-RWD.png" /></a>
-            <a class="certGroup" href="https://www.youracclaim.com/badges/8c5cb9d7-14bb-432d-9abe-233d44bbf624/public_url"><h3>MTA 98-375</h3><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/mta-html5-application-development-fundamentals-certified-2020.png" /></a>
-          </div>
-        </div>
-      </div>
-      <div id="toProj">
-        <a href="#projects">
-          <h5> View My Projects </h5>
-          <i class="fas fa-project-diagram"></i>
-        </a>
-      </div>
-    </section>
-    <section id="projects">
-      <h1 id="proj-sec-title"> My Projects </h1>
-      <div id="proj-g-ctnr">
-        <div id="slideshow-ctnr">
-        <div class="ss-obj">
-          <div class="project-tile card">
-            <img class="card-img-top" src="https://i.imgur.com/QdYZKJm.png" alt="Product Landing Page on CodePen" />
-            <div class="card-body">
-              <a class="card-link" href="https://codepen.io/Jacob-Bruce/pen/povvYro" target="_blank"> Product Landing Page </a>
-            </div>
-          </div>
-        </div>
-        <div class="ss-obj">
-          <div class="project-tile card">
-            <img class="card-img-top" src="https://i.imgur.com/Fvy6zBQ.png" alt="Technical Documentation Page on CodePen" />
-            <div class="card-body">
-              <a class="card-link" href="https://codepen.io/Jacob-Bruce/pen/BEEwgm" target="_blank"> Technical Documentation Page </a>
-            </div>
-          </div>
-        </div>
-        <div class="ss-obj">
-          <div class="project-tile card">
-            <img class="card-img-top" src="https://i.imgur.com/29gOL0o.png" alt="Information Form on CodePen" />
-            <div class="card-body">
-              <a class="card-link" href="https://codepen.io/Jacob-Bruce/pen/NmbdGJ" target="_blank"> Information Form </a>
-            </div>
-          </div>
-        </div>
-        <div class="ss-obj">
-          <div class="project-tile card">
-            <img class="card-img-top" src="https://i.imgur.com/FCxvgwI.png" alt="Glossary Page on CodePen"/>
-            <div class="card-body">
-              <a class="card-link" href="https://codepen.io/Jacob-Bruce/pen/WNNEVLK" target="_blank"> Glossary Page </a>
-            </div>
-          </div>
-        </div>
-        <div class="ss-obj">
-          <div class="project-tile card">
-            <img class="card-img-top" src="https://i.imgur.com/51404js.png" alt="Tribute Page 1 of 2 on CodePen" />
-            <div class="card-body">
-              <a class="card-link" href="https://codepen.io/Jacob-Bruce/pen/yrzWEe" target="_blank"> Tribute Page (1 of 2) </a>
-            </div>
-          </div>
-        </div>
-        <div class="ss-obj">
-          <div class="project-tile card">
-            <img class="card-img-top" src="https://i.imgur.com/tkwtBOj.png" alt="Tribute Page 2 of 2 on CodePen"/>
-            <div class="card-body">
-              <a class="card-link" href="https://codepen.io/Jacob-Bruce/pen/ddwwdB" target="_blank"> Tribute Page (2 of 2) </a>
-            </div>
-          </div>
-        </div>
-        <div class="ss-obj">
-          <div id="moreProjSlide">
-            <h1> Wanna see more?</h1>
-            <p> I post my projects accross many sites such as GitHub and CodePen. It would be too long if I put them all here, so I've provided links to the various sites I post my projects to. Click the links below to see more projects from me. They will open in a different tab so you won't have to navigate back here.</p>
-            <i class="fas fa-arrow-down fa-5x" style="animation: upAndDown 2s linear infinite;"></i>
-            <br>
-            <p> Hope you enjoy! </p>
-          </div>
-        </div>
-        <div id="slideBtn-ctnr">
-          <a class="slideBtn" onclick="lastSlide();">&#10094; Back </a>
-          <a class="slideBtn" onclick="nextSlide();">Next &#10095;</a>
-        </div>
-        <div id="slidePos"><p id="currentSlide"></p><p>/</p><p id="slideAmount"></p></div>
-      </div>
-      </div>
-      <br/>
-      <div style="display: flex;width:100%;justify-content:center;">
-        <form action="https://codepen.io/Jacob-Bruce/pens/public" method="get" target="_blank">
-          <button class="full-proj" type="submit">
-            View My CodePen
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </form>
-        <form action="https://github.com/JacobTyBruce" method="get" target="_blank">
-          <button class="full-proj" type="submit">
-            View My GitHub
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </form>
-        <form action="https://bitbucket.org/JacobTyBruce/" method="get" target="_blank">
-          <button class="full-proj" type="submit">
-            View My BitBucket
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </form>
-      </div>
-      <span style="height:2vh"></span>
-      <a href="#contact" id="to-contact"> <h5 style="display:inline;"> Contact Me </h5> <i class="fas fa-address-book"></i> </a>
-    </section>
-    <section id="contact">
-      <h1 id="contact-title"> Get in Contact </h1>
-      <div id="contact-icons">
-        <a id="profile-link" href="https://www.freecodecamp.org/jacob_bruce" target="_blank">
-          <i class="fab fa-free-code-camp fa-3x"></i>
-          <h6> FreeCodeCamp </h6>
-        </a>
-        <a id="cdpn-icon" href="https://codepen.io/Jacob-Bruce" target="_blank">
-          <i class="fab fa-codepen fa-3x"></i>
-          <h6> CodePen </h6>
-        </a>
-        <a id="github-icon" href="https://github.com/JacobTyBruce" target="_blank">
-          <i class="fab fa-github fa-3x"></i>
-          <h6> GitHub </h6>
-        </a>
-        <a id="email-icon" href="mailto:jacobbrucedev@gmail.com?Subject=">
-          <i class="fas fa-envelope fa-3x"></i>
-          <h6> Email </h6>
-        </a>
-      </div>
-      <form id="response-form" action="Main.php" method="POST">
-        <h1> Have A question? </h1>
-        <p> Let me know </p>
-        <hr style="background:white">
-        <label for="fullName"> Full Name: </label>
-        <input type="text" name="fullName" id="fullName" placeholder="John Doe" required />
-        <label for="email"> Email: </label>
-        <input type="email" name="email" id="email" placeholder="johndoe@example.com" required />
-        <label for="tel"> Phone Number: </label>
-        <input type="tel" name="tel" id="tel" placeholder="xxx-xxx-xxxx" />
-        <label for="comment"> Comment: </label>
-        <textarea id="comment-area" name="comment" required> </textarea>
-        <br />
-        <button type="submit" id="send-btn" name="submit"> Send </button>
-      </form>
-    </section>
-      <script src="Main.js"></script>
-  </body>
-  </html>
-<html>
+    <div class="calculator">
+        <input type="text" id="screen" maxlength="20">
+        <div class="calc-buttons">
 
-<head>
+          
 
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,greek' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="styles.css">
+<div class="functions-one">
+        <button class="button triggers">C</button>
+        <button class="button basic-stuff">(</button>
+        <button class="button basic-stuff">)</button>
+        <button class="button numbers">7</button>
+        <button class="button numbers">8</button>
+        <button class="button numbers">9</button>
+        <button class="button numbers">4</button>
+        <button class="button numbers">5</button>
+        <button class="button numbers">6</button>
+        <button class="button numbers">1</button>
+        <button class="button numbers">2</button>
+        <button class="button numbers">3</button>
+        <button class="button basic-stuff">±</button>
+        <button class="button numbers">0</button>
+        <button class="button basic-stuff">.</button>
+</div>
+    
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/2.6.0/math.min.js"></script>
-  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
-</head>
 
-<body>
-  <div class="wrapper">
-   <br />
-    <div class="calc">
-      <div class="top">
-        <div class='result'></div>
-        <div class='screen'><span id="screentext" class="screentext animated"></span><span class="hints"></span></div>
-      </div>
-      <div class="keyboard">
-
-        <div class="crow">
-          <div class='cb cbac'>AC</div>
-          <div class="cb cbpar" key='('>(</div>
-          <div class="cb cbpar" key=')'>)</div>
-          <div class='cb cbce'>CE</div>
+        <div class="functions-two">
+            <button class="button triggers">&#60;=</button>
+            <button class="button complex-stuff">%</button>
+            <button class="button complex-stuff">x !</button>
+            <button class="button complex-stuff">x^</button>
+            <button class="button basic-stuff">*</button>
+            <button class="button basic-stuff">/</button>
+            <button class="button complex-stuff">ln</button>
+            <button class="button complex-stuff">e</button>
+            <button class="button basic-stuff">+</button>
+            <button class="button complex-stuff">x ²</button>
+            <button class="button complex-stuff">log</button>
+            <button class="button complex-stuff">cos</button>
+            <button class="button basic-stuff">-</button>
+            <button class="button complex-stuff">√</button>
+            <button class="button complex-stuff">sin</button>
+            <button class="button complex-stuff">tan</button>
+            <button class="button triggers">=</button>
+            <button class="button complex-stuff">&#x003C0;</button>
+            <button class="button complex-stuff">∘</button>
+            <button class="button complex-stuff">rad</button>
         </div>
-
-        <div class="crow">
-          <div class="cb cbnum" key='pi'>π</div>
-          <div class="cb cbnum" key='e'>e</div>
-          <div class="cb cbnum" key='phi'>φ</div>
-          <div class="cb cbnum" key='tau'>τ</div>
-        </div>
-
-        <div class="crow">
-          <div class="cb cbinv">Inv</div>
-          <div class="cb cbfun" key1='sin(' key2="asin(">sin<sup class="inv">-1</sup></div>
-          <div class="cb cbfun" key1='cos(' key2="acos(">cos<sup class="inv">-1</sup></div>
-          <div class="cb cbfun" key1='tan(' key2="atan(">tan<sup class="inv">-1</sup></div>
-        </div>
-
-        <div class="crow">
-          <div class="cb cbfun" key1='log10('>log</div>
-          <div class="cb cbfun" key1='log('>ln</div>
-          <div class="cb cbop" key='!' char='!'>!</div>
-          <div class="cb cbop" key='deg' char='deg'>deg</div>
-        </div>
-
-        <div class="crow">
-          <div class="cb cbfun" key1='sqrt('>√</div>
-          <div class="cb cbop" key='^2' char='²'>x²</div>
-          <div class="cb cbop" key='^3' char='³'>x³</div>
-          <div class="cb cbop" key='^' char='^'>^</div>
-        </div>
-
-        <div class="crow">
-          <div class="cb cbnum lighter" key='7'>7</div>
-          <div class="cb cbnum lighter" key='8'>8</div>
-          <div class="cb cbnum lighter" key='9'>9</div>
-          <div class="cb cbop operands" key='/' char='÷'>÷</div>
-        </div>
-
-        <div class="crow">
-          <div class="cb cbnum lighter" key='4'>4</div>
-          <div class="cb cbnum lighter" key='5'>5</div>
-          <div class="cb cbnum lighter" key='6'>6</div>
-          <div class="cb cbop operands" key='*' char='×'>×</div>
-        </div>
-
-        <div class="crow">
-          <div class="cb cbnum lighter" key='1'>1</div>
-          <div class="cb cbnum lighter" key='2'>2</div>
-          <div class="cb cbnum lighter" key='3'>3</div>
-          <div class="cb cbop operands" key='-' char='-'>-</div>
-        </div>
-
-        <div class="crow">
-          <div class="cb cbnum lighter" key='0'>0</div>
-          <div class="cb cbnum lighter" key='.'>.</div>
-          <div class="cb cbop lighter" key='E' char='E'>exp</div>
-          <div class="cb cbop operands" key='+' char='+'>+</div>
-        </div>
-
-        <div class="crow">
-          <div class="cb cbrnd" style="width:25%">Rnd</div>
-          <div class="cb cbans" style="width:25%">Ans</div>
-          <div class="cb enter" style="width:50%">=</div>
-        </div>
-
+   
       </div>
     </div>
-  </div>
 </body>
 
 </html>
